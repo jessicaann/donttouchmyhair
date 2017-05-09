@@ -1,0 +1,98 @@
+/* 
+darker brown: #663120
+light brown I like #994A30 
+base pink: #FFB6C1
+dusty rose: CC929A
+vibrant pink: FF6980
+burgundy pink: 7F3540*/
+
+h1 {
+	font-family: 'Oleo Script', cursive;
+	color: white;
+	font-size: 1.5em;
+	margin: 0;
+	-webkit-margin-before: 0.20em;
+	-webkit-margin-after: 0.20em;
+}
+p.intro {
+	font-family: 'Oleo Script', cursive;
+	color: white;
+	font-size: 2.5em;
+	margin: 0;
+	text-align: center;
+	-webkit-margin-before: 0.20em;
+	-webkit-margin-after: 0.20em;
+}
+html {
+	height: 100%;
+}
+body {
+	font-family: Roboto, sans-serif;
+	height: 100%;
+}
+nav {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+ul {
+	list-style: none;
+}
+.navback {
+	width: 100%;
+	background-color: #FFB6C1;
+}
+.hidden {
+	display: none;
+}
+.afro {
+	z-index: 0;
+	position: relative;
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+  border-radius: 20%;
+  background-color: #663120;
+ }
+.face {
+	z-index: -1;
+	position: relative;
+	top: 20%;
+	margin: 0 auto;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	background-color: #994A30;
+}
+.landing {
+	background-color: #FFB6C1;
+	padding-top: 0;
+	height: auto;
+}
+.page-two {
+	background-color: #ffffff;
+	padding-top: 0;
+	height: auto;
+}
+.langbox {
+	height: 700px;
+}
+.thumbnail {
+	width: 200px;
+	height: 200px;
+}
+.emptyrow {
+	height: 6em;
+}
+p {
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 1em;
+	margin-bottom: 10px;
+	-webkit-margin-after: 10px;ß
+}
+select, label {
+	position: relative;
+	top: 15%;
+	text-align: center;
+}
