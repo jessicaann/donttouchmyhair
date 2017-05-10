@@ -4,22 +4,27 @@ light brown I like #994A30
 base pink: #FFB6C1
 dusty rose: CC929A
 vibrant pink: FF6980
-burgundy pink: 7F3540*/
+burgundy pink: 7F3540
+Second palette
+Yellow: FFFDCF
+light blue: 7DB4CC
+dusty blue: 76A0B2
+dusty pinK B26E78*/
 
 h1 {
-	font-family: 'Oleo Script', cursive;
-	color: white;
-	font-size: 1.5em;
-	margin: 0;
-	-webkit-margin-before: 0.20em;
-	-webkit-margin-after: 0.20em;
-}
-p.intro {
 	font-family: 'Oleo Script', cursive;
 	color: white;
 	font-size: 2.5em;
 	margin: 0;
 	text-align: center;
+	-webkit-margin-before: 0.20em;
+	-webkit-margin-after: 0.20em;
+}
+p.nav {
+	font-family: 'Oleo Script', cursive;
+	color: white;
+	font-size: 1em;
+	margin: 0;
 	-webkit-margin-before: 0.20em;
 	-webkit-margin-after: 0.20em;
 }
@@ -70,7 +75,12 @@ ul {
 	height: auto;
 }
 .page-two {
-	background-color: #ffffff;
+	background-color: #FFFDCF;
+	padding-top: 0;
+	height: auto;
+}
+.page-three {
+	background-color: #B26E78;
 	padding-top: 0;
 	height: auto;
 }
@@ -84,15 +94,67 @@ ul {
 .emptyrow {
 	height: 6em;
 }
-p {
-	font-size: 18px;
-	font-weight: bold;
-	margin-top: 1em;
-	margin-bottom: 10px;
-	-webkit-margin-after: 10px;ß
+#player {
+	width: 75%;
+	display: block;
+	margin: 0 auto;
 }
 select, label {
-	position: relative;
-	top: 15%;
-	text-align: center;
+	display: block;
 }
+label {
+	font-size: 2em;
+	font-family: 'Oleo Script', cursive;
+	text-align: center;
+	padding: 1em 1em 0 1em;
+}
+select {
+	margin: 0 auto;
+	/*background: transparent;*/
+  	width: 7em;
+	font-size: 25px;
+	border-color: black;
+	height: 1.5em;
+	/*-webkit-appearance: none; <-if i don't want the arrow to appear*/
+}
+p.first-trans {
+	font-family: 'Arvo', serif;
+	font-size: 2em;
+	text-transform: uppercase;
+	text-align: center;
+
+}
+span.msg {
+	font-family: 'Arvo', serif;
+	font-size: 1em;
+	display: block;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

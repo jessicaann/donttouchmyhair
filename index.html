@@ -8,8 +8,9 @@
   <!-- Normalize.css, a cross-browser reset file -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css" rel="stylesheet">
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
   <!-- Stylesheets -->
   <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="stylesheet" type="text/css" href="float-grid.css">
@@ -19,7 +20,7 @@
 	<div class="navback">
 		<div class="row">
 			<div class="col-12">
-				<nav><h1>don't touch my hair</h1></nav>
+				<nav><p class="nav">don't touch my hair</p></nav>
 			</div>
 		</div>
 	</div>
@@ -27,35 +28,41 @@
 	<div class="landing">
 		<div class="row">
 			<div class="col-12">
-				<div class="afro">
-					<div class="face">
-						<p class="intro">Tell them, in every language, not to touch your hair.<br>Please.</p>
-					</div>
-				</div>
+				<h1>Tell them, in every language, not to touch your hair.<br>Please.</h1>
 			</div>				
 		</div>
 	</div> 
 <!--Translation Selection/Results-->
-	<div class="row page-two">
-		<div class="col-12">
-			<div class="langbox">
-				<div class="lang-select">
-					<label for="language">What language do you need this message in?</label>
-					<br>
-					<select class="lang-dropdown js-choose-lang">							
-						<option value="Language">Choose a language</option>
-					</select>
-				</div>
-				<div class="lang-results">
-					<p>Ne touche pas ma hair</p>
-				</div>
+	<div class="page-two">
+		<div class="row page-two">
+			<div class="col-12">
+					<div class="lang-select">
+						<label for="language">Tell me how to say <span class="msg">"Don't touch my hair. Please." </span>in: </label><br>
+						<select class="lang-dropdown js-choose-lang">							
+							<option value="Language">English</option>
+						</select>
+					</div>
+					<div class="lang-results">
+						<p class="first-trans">"Ne touchez pas mes cheveux. S'il vous plaît."</p>
+					</div>
 			</div>
 		</div>
 	</div>
 <!-- Lyrics -->
-	<div class="row">
-		<div class="col-12">
-			<p>When saying it isn't enough, sing it</p>
+	<div class="page-three">
+		<div class="row">
+			<div class="col-12">
+				<h1>When saying it isn't enough, sing it</h1>
+			</div>
+			<div class="col-12">
+				<div id="player"></div>
+			</div>
+			<div class="col-6">
+				<p>English Lyrics appear here</p>
+			</div>
+			<div class="col-6">
+				<p>Translated Lyrics appear here</p>
+			</div>
 		</div>
 	</div>
 <!-- Music Video -->
