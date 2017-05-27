@@ -130,8 +130,15 @@ span.msg {
 	display: block;
 
 }
-
-
+#typelanguages {
+    display: block;
+    margin: 0 auto;
+    height: 2em;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid black;
+    outline: 0;
+}
 
 
 

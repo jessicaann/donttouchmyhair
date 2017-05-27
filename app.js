@@ -1,7 +1,6 @@
 
 /*Yandex Get List of Languages*/
-function getListLangs (successCallback) {
-  console.log('getListLangs');
+function getListLangs(successCallback) {
   var getLangSettings = {
     url: "https://translate.yandex.net/api/v1.5/tr.json/getLangs",
     data: {
@@ -17,18 +16,17 @@ function getListLangs (successCallback) {
 }
 
 function displayListLangs (data) {
-  console.log(data.langs);
-	var resultElement = '';
-	if (data.langs) {
-		var keys = Object.keys(data.langs);
-		keys.forEach(function(key) {
-			resultElement += 
-			'<option value="' + key + '">' + data.langs[key] + '</option>';
-		}); 
-	}
-	$('.js-choose-lang').html(resultElement);
+    console.log(data.langs);
+    $('#typelanguages').autocomplete({
+        source: Object.values(data.langs),
+        select: function(event, ui){
+        var bar = $('#typelanguages').val();
+        console.log(bar);
+    }
+    });
 }
 
+//$('#typelanguages').val();
 /*Yandex Translate*/
 function getTranslation (successCallback) {
   var translationURL ='https://translate.yandex.net/api/v1.5/tr.json/translate';
@@ -61,6 +59,7 @@ function watchPageLoad() {
 
 $(watchPageLoad);
 
+
 /* use the same language selection to feed into a second translate function
 to translate the song lyrics automatically*/
 
@@ -87,12 +86,13 @@ function onYouTubeIframeAPIReady() {
 
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
-  event.target.playVideo();
+  //event.target.playVideo();
 }
 
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
+
 var done = false;
 function onPlayerStateChange(event) {
   if (event.data == YT.PlayerState.PLAYING && !done) {
@@ -103,10 +103,8 @@ function onPlayerStateChange(event) {
 function stopVideo() {
   player.stopVideo();
 }
-
-
-
-
+/*Skrollr code*/
+var s = skrollr.init();
 
 
 
