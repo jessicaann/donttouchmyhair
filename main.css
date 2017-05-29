@@ -3,7 +3,7 @@ darker brown: #663120
 light brown I like #994A30 
 base pink: #FFB6C1
 dusty rose: CC929A
-vibrant pink: FF6980
+vibrant pink: #FF6980
 burgundy pink: 7F3540
 Second palette
 Yellow: FFFDCF
@@ -45,51 +45,43 @@ ul {
 }
 .navback {
 	width: 100%;
-	background-color: #FFB6C1;
+	background-color: rgba(10, 10, 10, 0.2);
+	position: fixed;
 }
 .hidden {
 	display: none;
 }
-.afro {
-	z-index: 0;
-	position: relative;
-  width: 800px;
-  height: 800px;
-  margin: 0 auto;
-  border-radius: 20%;
-  background-color: #663120;
- }
-.face {
-	z-index: -1;
-	position: relative;
-	top: 20%;
-	margin: 0 auto;
-	width: 500px;
-	height: 500px;
-	border-radius: 50%;
-	background-color: #994A30;
-}
+
 .landing {
 	background-color: #FFB6C1;
-	padding-top: 0;
-	height: auto;
+	height: 100%;
+}
+.afro1 {
+	background-image: url(./img/afro1.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 45px;
+	height: 100%;
 }
 .page-two {
 	background-color: #FFFDCF;
-	padding-top: 0;
-	height: auto;
+	height: 100%;
+}
+.afro2 {
+	background-image: url(./img/afro2.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 45px;
+	height: 100%;
 }
 .page-three {
 	background-color: #B26E78;
-	padding-top: 0;
+	padding-top: 45px;
 	height: auto;
 }
-.langbox {
-	height: 700px;
-}
-.thumbnail {
-	width: 200px;
-	height: 200px;
+.lang-select {
+	color: #FF6980;
+	background-color: rgba(10, 10, 10, 0.2);
 }
 .emptyrow {
 	height: 6em;
@@ -98,6 +90,7 @@ ul {
 	width: 75%;
 	display: block;
 	margin: 0 auto;
+	margin-bottom: 1em;
 }
 select, label {
 	display: block;
@@ -119,10 +112,12 @@ select {
 }
 p.first-trans {
 	font-family: 'Arvo', serif;
-	font-size: 2em;
+	color: #FF6980;
+	font-size: 1em;
 	text-transform: uppercase;
 	text-align: center;
-
+	padding-top: 1em;
+	padding-right: 5em;
 }
 span.msg {
 	font-family: 'Arvo', serif;
@@ -136,13 +131,12 @@ span.msg {
     height: 2em;
     background: transparent;
     border: 0;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #FF6980;
     outline: 0;
 }
-
-
-
-
+input {
+	color: #FF6980;
+}
 
 
 

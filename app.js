@@ -1,67 +1,68 @@
 
 /*Yandex Get List of Languages*/
-function getListLangs(successCallback) {
-  var getLangSettings = {
-    url: "https://translate.yandex.net/api/v1.5/tr.json/getLangs",
-    data: {
-      key: "trnsl.1.1.20170502T035123Z.42da7472a927a423.30098ed9aeffb741e96cc5613005d8db93c70188",
-      ui: "en"
-    },
-    jsonp: "callback",
-    dataType: "jsonp",
-    method: "GET",
-    success: successCallback
-  }
-  $.ajax(getLangSettings);
-}
-
-function displayListLangs (data) {
-    console.log(data.langs);
-    $('#typelanguages').autocomplete({
-        source: Object.values(data.langs),
-        select: function(event, ui){
-        var bar = $('#typelanguages').val();
-        console.log(bar);
+  function getListLangs(successCallback) {
+    var getLangSettings = {
+      url: "https://translate.yandex.net/api/v1.5/tr.json/getLangs",
+      data: {
+        key: "trnsl.1.1.20170502T035123Z.42da7472a927a423.30098ed9aeffb741e96cc5613005d8db93c70188",
+        ui: "en"
+      },
+      jsonp: "callback",
+      dataType: "jsonp",
+      method: "GET",
+      success: successCallback
     }
-    });
-}
+    $.ajax(getLangSettings);
+  }
+/* Yandex Display List of Languages Dropdown + Autocomplete */
+  function displayListLangs (data) {
+      console.log(data.langs);
+      var languages = [];
+      for(key in data.langs){
+        languages.push({id: key, label: data.langs[key], value: key});
+      }
+      $('#typelanguages').autocomplete({
+          source: languages,
+          select: function(event, ui){
+          console.log("selected: " + ui.item.value);
+          getTranslation(ui.item.value, displayTranslation);
+        }
+      });
+  }
+/* Yandex Translate "Please do not Touch My Hair" */
+  function getTranslation (language, successCallback) {
+    var translationURL ='https://translate.yandex.net/api/v1.5/tr.json/translate';
+    var getTranslationSettings = {
+      url: translationURL,
+      data: {
+        key: "trnsl.1.1.20170502T035123Z.42da7472a927a423.30098ed9aeffb741e96cc5613005d8db93c70188",
+      	format: "text",
+      	text: "Do not touch my hair. Please.",
+      	lang: language,
+        options: 1,
+      },
+      jsonp: "callback",
+      dataType: "jsonp",
+      method: "GET",
+      success: successCallback
+    } 
 
-//$('#typelanguages').val();
-/*Yandex Translate*/
-function getTranslation (successCallback) {
-  var translationURL ='https://translate.yandex.net/api/v1.5/tr.json/translate';
-  var getTranslationSettings = {
-    url: translationURL,
-    data: {
-      key: "trnsl.1.1.20170502T035123Z.42da7472a927a423.30098ed9aeffb741e96cc5613005d8db93c70188",
-    	format: "text",
-    	text: "Please don't touch my hair",
-    	lang: "es",
-      options: 1,
-    },
-    jsonp: "callback",
-    dataType: "jsonp",
-    method: "GET",
-    success: successCallback
-  } 
+    $.ajax(getTranslationSettings);
+  };
+/* Display "Please Do Not Touch My Hair" Translation on Page Two */
+  function displayTranslation(data){
+    console.log(data.text[0]);
+    var transElement = 
+    '<p class="first-trans">' + data.text[0] + '</p>';
+    $(".first-trans").html(transElement);
+  }
 
-  $.ajax(getTranslationSettings);
-};
-
-function displayTranslation(data){
-  console.log(data);
-}
-
-function watchPageLoad() {
-  getListLangs(displayListLangs);
-  getTranslation(displayTranslation);
-}
-
-$(watchPageLoad);
-
-
-/* use the same language selection to feed into a second translate function
-to translate the song lyrics automatically*/
+/* Ready Functions */
+  function watchPageLoad() {
+    getListLangs(displayListLangs);
+    getTranslation(displayTranslation);
+  }
+  $(watchPageLoad);
 
 /*YouTube Video API*/
 
@@ -77,7 +78,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-  videoId: 'j5M7glmOTOs',
+  videoId: 'YTtrnDbOQAU',
   events: {
     'onReady': onPlayerReady,
     'onStateChange': onPlayerStateChange
@@ -91,7 +92,7 @@ function onPlayerReady(event) {
 
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
+//    the player should play for twenty seconds and then stop.
 
 var done = false;
 function onPlayerStateChange(event) {
@@ -103,8 +104,7 @@ function onPlayerStateChange(event) {
 function stopVideo() {
   player.stopVideo();
 }
-/*Skrollr code*/
-var s = skrollr.init();
+
 
 
 
