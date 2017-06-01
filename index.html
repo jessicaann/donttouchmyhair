@@ -30,6 +30,7 @@
 		<div class="afro1">
 			<div class="row">
 				<div class="col-12">
+					<p class="about">It happens wherever you go. Locally, nationally, globally. No matter who you are or what you look like, there are always people who are fascinated captivated by the beauty of your hair. While flattering, the invasion of one’s personal space is not always welcome. Before a stranger’s hand can slice through the air on it’s way to accost your crown - </p>
 					<h1>Tell them, in every language, not to touch your hair.<br>Please.</h1>
 				</div>			
 			</div>
@@ -39,10 +40,7 @@
 	<div class="page-two">
 		<div class="afro2">
 			<div class="row">
-				<div class="col-6 emptyrow">
-					
-				</div>
-				<div class="col-6">
+								<div class="col-12">
 					<div class="lang-select">
 	                    <label for="language">Tell me how to say <span class="msg">"Don't touch my hair. Please." </span>in: </label>
 	                    <br>
@@ -68,17 +66,11 @@
 				<div id="player"></div>
 			</div>
 			<div class="col-6">
-				<button>
-					<h2>Original Lyrics - English</h2>
+				<button class="orig-button">
+					<p>Original Lyrics</p>
 				</button>
-			</div>
-			<div class="col-6">
-				<button>
-					<h2>Translated Lyrics</h2>
-				</button>
-			</div>
-			<div class="col-3">
-				<p>
+				<div class="col-6">
+				<p class="original-lyrics hidden">
 					Don't touch my hair<br>
 					When it's the feelings I wear<br>
 					Don't touch my soul<br>
@@ -115,8 +107,8 @@
 					What you say to me<br>
 				</p>
 			</div>
-			<div class="col-3">
-				<p>
+			<div class="col-6">
+				<p class="original-lyrics hidden">
 					Don't touch my pride<br>
 					They say the glory's all mine<br>
 					Don't test my mouth<br>
@@ -151,25 +143,30 @@
 					What you say to me [x16]<br>
 				</p>
 			</div>
-			<!--Translated Lyrics Columns-->
-			<div class="col-3">
-				<p>
-					
-				</p>
 			</div>
-			<div class="col-3">
-				<p>
+<!--Translated Lyrics Columns-->
+			<div class="col-6">
+				<button class="trans-button">
+					<p>Translated Lyrics</p>
+				</button>
+				<div class="col-6">
+					<p class="second-trans-p1 translated-lyrics hidden">
 					
-				</p>
+					</p>
+				</div>
+				<div class="col-6">
+					<p class="second-trans-p2 translated-lyrics hidden">
+					
+					</p>
+				</div>
 			</div>
-			
 		</div>
 		<div class="row emptyrow">
 		</div>
 	</div>
 <!-- In the mobile version, I'd like for the lyrics to be buttons...they can choose 
 to see either lyrics or see both at once. -->
-
+<!-- Can i get the about box to show first, then scroll to have the h2 part appear? Need skrollr? work on buttons appearance, work on refiniing the changes for the mobile version. Create an error message if Trans button is clicked before the language is chosen? Need a don't touch my hair logo-->
 
 	<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

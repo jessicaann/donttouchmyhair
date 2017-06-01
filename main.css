@@ -1,5 +1,5 @@
 /* 
-darker brown: #663120
+darker brown:; #663120
 light brown I like #994A30 
 base pink: #FFB6C1
 dusty rose: CC929A
@@ -11,23 +11,8 @@ light blue: 7DB4CC
 dusty blue: 76A0B2
 dusty pinK B26E78*/
 
-h1 {
-	font-family: 'Oleo Script', cursive;
-	color: white;
-	font-size: 2.5em;
-	margin: 0;
-	text-align: center;
-	-webkit-margin-before: 0.20em;
-	-webkit-margin-after: 0.20em;
-}
-p.nav {
-	font-family: 'Oleo Script', cursive;
-	color: white;
-	font-size: 1em;
-	margin: 0;
-	-webkit-margin-before: 0.20em;
-	-webkit-margin-after: 0.20em;
-}
+/* Element Selectors */
+
 html {
 	height: 100%;
 }
@@ -43,54 +28,14 @@ nav {
 ul {
 	list-style: none;
 }
-.navback {
-	width: 100%;
-	background-color: rgba(10, 10, 10, 0.2);
-	position: fixed;
-}
-.hidden {
-	display: none;
-}
-
-.landing {
-	background-color: #FFB6C1;
-	height: 100%;
-}
-.afro1 {
-	background-image: url(./img/afro1.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding-top: 45px;
-	height: 100%;
-}
-.page-two {
-	background-color: #FFFDCF;
-	height: 100%;
-}
-.afro2 {
-	background-image: url(./img/afro2.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding-top: 45px;
-	height: 100%;
-}
-.page-three {
-	background-color: #B26E78;
-	padding-top: 45px;
-	height: auto;
-}
-.lang-select {
-	color: #FF6980;
-	background-color: rgba(10, 10, 10, 0.2);
-}
-.emptyrow {
-	height: 6em;
-}
-#player {
-	width: 75%;
-	display: block;
-	margin: 0 auto;
-	margin-bottom: 1em;
+h1 {
+	font-family: 'Oleo Script', cursive;
+	color: white;
+	font-size: 2em;
+	margin: 0;
+	text-align: center;
+	-webkit-margin-before: 0.20em;
+	-webkit-margin-after: 0.20em;
 }
 select, label {
 	display: block;
@@ -110,20 +55,114 @@ select {
 	height: 1.5em;
 	/*-webkit-appearance: none; <-if i don't want the arrow to appear*/
 }
-p.first-trans {
-	font-family: 'Arvo', serif;
+input {
 	color: #FF6980;
-	font-size: 1em;
-	text-transform: uppercase;
-	text-align: center;
-	padding-top: 1em;
-	padding-right: 5em;
 }
+button {
+	display: block;
+	min-width: 11em;
+	margin: 0 auto;
+	background: rgba(17, 17, 17, 0.2);
+	color: white;
+	border: 1px solid #ffffff;
+	text-transform: uppercase;
+}
+button p {
+	padding: 5px;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+}
+
+/* General Classes */
+
 span.msg {
 	font-family: 'Arvo', serif;
 	font-size: 1em;
 	display: block;
 
+}
+p.nav {
+	font-family: 'Oleo Script', cursive;
+	color: white;
+	font-size: 1em;
+	margin: 0;
+	-webkit-margin-before: 0.20em;
+	-webkit-margin-after: 0.20em;
+}
+.hidden {
+	display: none;
+}
+.emptyrow {
+	height: 6em;
+}
+.ui-autocomplete li {
+	color: #FF6980;
+}
+
+/* Template */
+
+.navback {
+	width: 100%;
+	background-color: rgba(10, 10, 10, 0.2);
+	position: fixed;
+}
+
+.landing {
+	background-color: #FFB6C1;
+	height: auto;
+}
+.landing .afro1 {
+	background-image: url(./img/afro1.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 45px;
+	height: 100%;
+	background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.landing .about {
+	font-family: 'Arvo', serif;
+	color: white;
+	font-size: 1em;
+	text-align: center;
+	background-color: rgba(10, 10, 10, 0.2);
+	padding: 10px;
+}
+.page-two {
+	background-color: #FFFDCF;
+	height: auto;
+}
+.page-two .afro2 {
+	background-image: url(./img/afro2.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 45px;
+	height: 100%;
+}
+.page-two .lang-select {
+	color: #FF6980;
+	background-color: rgba(10, 10, 10, 0.2);
+	padding: 10px;
+}
+.page-two .first-trans {
+	font-family: 'Arvo', serif;
+	color: #FF6980;
+	font-size: 1.2em;
+	text-align: center;
+	background-color: rgba(10, 10, 10, 0.2);
+}
+.page-three {
+	background-color: #B26E78;
+	padding-top: 45px;
+	height: auto;
+}
+#player {
+	width: 75%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 1em;
 }
 #typelanguages {
     display: block;
@@ -134,11 +173,38 @@ span.msg {
     border-bottom: 2px solid #FF6980;
     outline: 0;
 }
-input {
-	color: #FF6980;
+@media only screen and (min-width:  640px) {
+	h1 {
+		font-size: 3em;
+	}
+	.landing {
+		height: 100%;
+
+	}
+	.landing .about {
+		font-family: 'Arvo', serif;
+		color: white;
+		font-size: 1.5em;
+	}
+	.afro1 {
+		background-size: cover;
+	}
+	.page-two {
+		height: 100%;
+
+	}
+	.afro2 {
+		background-size: cover;
+	}
+	.page-two .first-trans {
+		font-size: 2em;
+	}
 }
 
-
+@media only screen and (min-width:  1280px) {
+	height: 80%;
+	background-size: cover;
+}
 
 
 
