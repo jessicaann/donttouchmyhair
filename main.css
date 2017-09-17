@@ -8,7 +8,7 @@ burgundy pink: 7F3540
 Second palette
 Yellow: FFFDCF
 light blue: 7DB4CC
-dusty blue: 76A0B2
+dusty blue: #76A0B2
 dusty pinK B26E78*/
 
 /* Element Selectors */
@@ -31,7 +31,7 @@ ul {
 h1 {
 	font-family: 'Oleo Script', cursive;
 	color: white;
-	font-size: 2em;
+	font-size: 5em;
 	margin: 0;
 	text-align: center;
 	-webkit-margin-before: 0.20em;
@@ -111,10 +111,10 @@ p.nav {
 	background-color: #FFB6C1;
 	height: auto;
 }
-.landing .afro1 {
-	background-image: url(./img/afro1.svg);
+.landing .afro2 {
+	background-image: url(./img/afro2.svg);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	padding-top: 45px;
 	height: 100%;
 	background-attachment: fixed;
@@ -122,13 +122,21 @@ p.nav {
 	justify-content: center;
 	align-items: center;
 }
-.landing .about {
+.story {
+	background-color: #B26E78;
+	height: 80%;
+}
+.story .about {
 	font-family: 'Arvo', serif;
 	color: white;
 	font-size: 1em;
 	text-align: center;
 	background-color: rgba(10, 10, 10, 0.2);
 	padding: 10px;
+}
+.story .box {
+	background-color: black;
+	margin-top: 32%;
 }
 .page-two {
 	background-color: #FFFDCF;
@@ -175,19 +183,19 @@ p.nav {
 }
 @media only screen and (min-width:  640px) {
 	h1 {
-		font-size: 3em;
+		font-size: 8em;
 	}
 	.landing {
 		height: 100%;
 
 	}
-	.landing .about {
+	.story .about {
 		font-family: 'Arvo', serif;
 		color: white;
 		font-size: 1.5em;
 	}
 	.afro1 {
-		background-size: cover;
+		background-size: contain;
 	}
 	.page-two {
 		height: 100%;
@@ -202,7 +210,7 @@ p.nav {
 }
 
 @media only screen and (min-width:  1280px) {
-	height: 80%;
+	height: 100%;
 	background-size: cover;
 }
 

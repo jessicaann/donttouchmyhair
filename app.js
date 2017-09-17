@@ -1,3 +1,15 @@
+/*List of countries and lamguages*/
+
+var countryList = {
+  "United States": "English",
+  "Mexico": "Spanish",
+  "Thailand": "Thai",
+  "Germany": "German",
+  "France": "French",
+  "Bulgaria": "Bulgaria",
+  
+
+}
 
 /*Yandex Get List of Languages*/
   function getListLangs(successCallback) {
